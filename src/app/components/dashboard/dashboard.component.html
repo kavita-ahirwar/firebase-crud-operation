@@ -1,0 +1,35 @@
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0">
+        <img class="brand-logo" src="../../../assets/images/logo.png.crdownload" style alt="positronX.io Logo">
+    </a>
+    <ul>
+        <li class="nav-item">
+            <a class="nav-link active" style="font-size: 20px;color: white;margin-left: 600px; margin-bottom: 5px; " routerLink="/student-profile">
+                <i class="pi pi-user mt-5" style="color: red; width: 40px; height: 30px; font-weight: bold;"></i>User Profile
+            </a>
+        </li>
+    </ul>
+    <ul>
+        <li class="nav-item">
+            <a class="nav-link active" routerLink="/student-add" style="font-size: 20px;color: white; margin-bottom: 5px; margin-left: 50px; ">
+                <i class="pi pi-user-plus mt-5" style="color: red; width: 40px; height: 30px; font-weight: bold;"></i>Add Student
+            </a>
+        </li>
+    </ul>
+    <ul>
+        <li class="nav-item" style="margin-right: 50px; font-size: 20px; color: white; margin-left: 50px; margin-top: 20px; list-style: none;">
+            <a class="nav-link" routerLink="/student-list" style="margin-top:40px ;">
+                <i class="pi pi-list" style="color: red; width: 40px; height: 30px; font-weight: bold;"></i>
+                <span class="user-image">
+                </span> Student-list
+            </a>
+        </li>
+    </ul>
+    <ul>
+        <li class="nav-item">
+            <a class="nav-link" style="font-size: 20px;  margin-right: 50px; margin-top: 35px; color:white" (click)="authService.SignOut()">
+                <i class="pi pi-sign-out" style="color: red; width: 40px; height: 30px; font-weight: bold;"></i>Log Out
+            </a>
+        </li>
+    </ul>
+</nav>

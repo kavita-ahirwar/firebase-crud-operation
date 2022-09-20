@@ -1,0 +1,17 @@
+.main {
+    width: 700px;
+    height: 800px;
+    margin: auto;
+    margin-top: 150px;
+    font-size: 17px;
+    font-family: poppins;
+    font-weight: bold;
+}
+
+.heading h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: poppins;
+    font-weight: bold;
+}

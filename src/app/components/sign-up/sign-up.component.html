@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="main">
+        <!-- <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> -->
+        <!-- <p-card> -->
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <p-card class="card">
+
+                <div>
+                    <h1>Sign Up</h1>
+                </div>
+                <div class="form-group">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-user"></i>
+                       <input type="text" pInputText placeholder="Name" class="form-control" formControlName="displayName" [ngClass]="{ 'is-invalid': submitted && f. displayName.errors }" >         
+                    </span><br>
+                    <span *ngIf="( f.displayName.touched && !f. displayName.valid && !f. displayName.errors?.pattern ) " style="color: red;">Name is required</span>
+                    <div *ngIf="f. displayName.errors?.pattern" style="color: red;">Only alphabate allow </div>
+                    <div *ngIf="(submitted && f.displayName.errors)" class="invalid-feedback">
+                        <div *ngIf="f. displayName.errors.required">Name is required</div>
+                    </div>
+                </div><br>
+                <div class="form-group">
+                    <span class="p-input-icon-left">
+                       <i class="pi pi-envelope"></i>
+                       <input type="email" pInputText placeholder="Email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">         
+                    </span><br>
+                    <span *ngIf="!f.email.valid && f.email.touched && !f.email.errors?.pattern" style="color: red;">Email is required</span>
+                    <div *ngIf="f.email.errors?.pattern" style="color: red;">please enter valid Email</div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <span class="p-input-icon-left">
+                       <i class="pi pi-unlock"></i>
+                       <input type="password" pInputText placeholder="Password" class="form-control" formControlName="password"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }">         
+                    </span>
+                    <span *ngIf="( f.password.touched && !f.password.valid && !f.password.errors?.pattern) " style="color: red;">Password is required</span>
+                    <div *ngIf="f.password.errors?.pattern" style="color: red;">please enter strong password </div>
+                </div><br>
+
+                <div class="form-group">
+                    <span class="p-input-icon-left">
+                       <i class="pi pi-mobile"></i>
+                       <input type="text" pInputText placeholder="mobile Number" class="form-control" formControlName="mobile"  [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">         
+                    </span><br>
+                    <span *ngIf="( f.mobile.touched && !f.mobile.valid && !f.mobile.errors?.pattern ) " style="color: red;">Mobile Number is required</span>
+                    <div *ngIf="f.mobile.errors?.pattern" style="color: red;">please enter 10 number </div>
+                    <div *ngIf="(submitted && f.mobile.errors)" class="invalid-feedback">
+                        <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+                    </div>
+                </div><br>
+                <div class="form-group">
+                    <span class="p-input-icon-left">
+                       <i class="pi pi-image" style="margin-left: 2px; margin-right: 20px;" ></i>
+                       <!-- <i class="fa-solid fa-house"></i> -->
+                       <input type="file" pInputText placeholder="image" class="form-control" formControlName="photoURL"  [ngClass]="{ 'is-invalid': submitted && f.photoURL.errors }">         
+                    </span><br>
+                    <span *ngIf="!f.photoURL.valid && f.photoURL.touched && !f.photoURL.errors?.pattern" style="color: red;">photoURL is required</span>
+                    <div *ngIf="f.photoURL.errors?.pattern" style="color: red;">please enter valid Password</div>
+                </div><br>
+                <!-- <div class="form-group">
+                    <span class="p-input-icon-left">
+                       <i class="pi pi-user"></i>
+                       <input type="url" pInputText placeholder="image" class="form-control" formControlName="image"  [ngClass]="{ 'is-invalid': submitted && f.image.errors }">         
+                    </span><br>
+                    <span *ngIf="!f.image.valid && f.image.touched && !f.image.errors?.pattern" style="color: red;">image is required</span>
+                    <div *ngIf="f.image.errors?.pattern" style="color: red;">please upload image</div>
+                </div><br> -->
+
+                <div>
+                    <button type="submit " class="btn btn-danger ">Submit</button>
+                    <!-- <button pButton type="button" label="SIngUp" class="p-button-primary" value="signUp"></button> -->
+
+                </div><br>
+                <div class="redirectToLogin">
+                    <span class="p-float-label">Already have an account?<span class="redirect" routerLink="/sign-in"> Sign In </span></span>
+                </div>
+            </p-card>
+
+        </form>
+        <!-- </p-card> -->
+        <!-- </form> -->
+    </div>
+
+</div>
+
+
+
+
+<!-- <i class="fa fa-user-o" aria-hidden="true"></i> -->
+<!-- <i class="fa-solid fa-house"></i> -->

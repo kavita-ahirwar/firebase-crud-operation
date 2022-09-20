@@ -1,0 +1,55 @@
+<div class="main">
+    <p-card>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form [formGroup]="studentForm" (ngSubmit)="submitStudentData()">
+                        <div class="heading">
+                            <h1>Student Registration</h1>
+                        </div>
+                        <div class="form-group">
+                            <label style="margin-top: 20px;">First Name</label>
+                            <input class="form-control" type="text" placeholder="Please Enter First Name" style="margin-top: 10px;" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }">
+                            <span *ngIf="( f['firstName'].touched && !f['firstName'].valid && !f['firstName'].errors)" style="color: red;"> First Name is required</span>
+                            <div *ngIf="(submitted && f['firstName'].errors)" class="invalid-feedback">
+                                <div *ngIf="f['firstName'].errors">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label style="margin-top: 20px;">Last Name</label>
+                            <input class="form-control" type="text" placeholder="Please Enter Last Name" style="margin-top: 10px;" formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }">
+                            <span *ngIf="( f['lastName'].touched && !f['lastName'].valid && !f['lastName'].errors) " style="color: red;"> Last Name is required</span>
+                            <!-- <div *ngIf="f['lastName'].errors?.pattern" style="color: red;">Only alphabate allow </div> -->
+                            <div *ngIf="(submitted && f['lastName'].errors)" class="invalid-feedback">
+                                <div *ngIf="f['lastName'].errors"> Last Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label style="margin-top: 20px;">Email</label>
+                            <input class="form-control" type="text" placeholder="Please Enter Email" style="margin-top: 10px;" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+                            <span *ngIf="!f['email'].valid && f['email'].touched && !f['email'].errors" style="color: red;">Email is required</span>
+                            <div *ngIf="(submitted && f['email'].errors)" class="invalid-feedback">
+                                <div *ngIf="f['email'].errors">email is required</div>
+                            </div>
+                            <!-- <div *ngIf="f['email'].errors" style="color: red;">please enter valid Email</div> -->
+                        </div>
+                        <div class="form-group">
+                            <label style="margin-top: 20px;">Mobile number</label>
+                            <input class="form-control" type="text" placeholder="Please Enter Mobile number" style="margin-top: 10px;" formControlName="mobileNumber" [ngClass]="{ 'is-invalid': submitted && f['mobileNumber'].errors }">
+                            <span *ngIf="( f['mobileNumber'].touched && !f['mobileNumber'].valid && !f['mobileNumber'].errors) " style="color: red;">Mobile Number is required</span>
+                            <div *ngIf="(submitted && f['mobileNumber'].errors)" class="invalid-feedback">
+                                <div *ngIf="f['mobileNumber'].errors">Mobile Number is required</div>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <button type="reset" class="btn btn-secondary gap-right"> Reset</button>&nbsp;
+                            <!-- <button type="reset" class="btn btn-secondary" class="Reset">Cancel</button> -->
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </p-card>
+</div>
