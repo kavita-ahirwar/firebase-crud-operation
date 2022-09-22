@@ -56,6 +56,7 @@ import { DeleteStudentComponent } from './delete-student/delete-student.componen
     
 
     ToastrModule.forRoot()
-  ]
+  ],
+  exports:[DashboardComponent]
 })
 export class ComponentsModule { }

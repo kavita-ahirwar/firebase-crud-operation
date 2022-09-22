@@ -75,4 +75,8 @@ export class EditStudentComponent implements OnInit {
 
   }
 
+  goBack(){
+    this.location.back();
+  }
+
 }

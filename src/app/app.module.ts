@@ -20,6 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
 import {InputTextModule} from 'primeng/inputtext';
 import { AuthService } from './shared/services/auth.service';
 import {MatIconModule} from '@angular/material/icon';
+import { ComponentsModule } from './components/components.module';
 
 
 
@@ -44,8 +45,8 @@ import {MatIconModule} from '@angular/material/icon';
     InputTextModule,
     ReactiveFormsModule,
     MatIconModule,
-    ToastrModule.forRoot()
-
+    ToastrModule.forRoot(),
+    ComponentsModule
 
   ],
   providers: [AuthService],
