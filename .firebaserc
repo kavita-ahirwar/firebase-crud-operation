@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "staging": "primeng-authantication",
+    "default": "primeng-authantication"
+  },
+  "targets": {},
+  "etags": {}
+}
