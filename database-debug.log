@@ -3,11 +3,7 @@ WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (fil
 WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
-17:23:42.814 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-17:23:42.949 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
-17:23:46.066 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - angularfirebase-authenti-a2fb1-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 112ms, init: 0ms
-17:23:46.126 [NamespaceSystem-blocking-namespace-operation-dispatcher-8:angularfirebase-authenti-a2fb1-default-rtdb$-714070502:] INFO com.firebase.core.namespace.StateManager - Namespace angularfirebase-authenti-a2fb1-default-rtdb status Active to Active
-17:24:02.212 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
-17:24:02.222 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: angularfirebase-authenti-a2fb1-default-rtdb
-17:24:02.230 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for angularfirebase-authenti-a2fb1-default-rtdb
-17:24:02.241 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
+12:29:04.880 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+12:29:05.046 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+12:29:12.798 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - primeng-authantication-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 137ms, init: 0ms
+12:29:12.884 [NamespaceSystem-blocking-namespace-operation-dispatcher-7:primeng-authantication-default-rtdb$1215717745:] INFO com.firebase.core.namespace.StateManager - Namespace primeng-authantication-default-rtdb status Active to Active

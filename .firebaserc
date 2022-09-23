@@ -1,6 +1,6 @@
 {
   "projects": {
-    "staging": "primeng-authantication",
+    "staging": "angularFirebase-authentication",
     "default": "primeng-authantication"
   },
   "targets": {},
