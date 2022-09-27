@@ -8,11 +8,47 @@
  }
   */
  
- .h2 {
-     margin-left: 700px;
-     /* text-align: center; */
-     font-size: 50px;
-     font-family: poppins;
-     font-weight: bold;
-     color: brown;
+ .btn_back {
+     text-align: right;
+ }
+ 
+ .btn_back .btn-primary {
+     margin-right: 15px
+ }
+ 
+ table th,
+ table td {
+     white-space: nowrap;
+ }
+ /* .poj {
+     border: 1px solid #ccc;
+     height: 400px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .poj1 {
+     display: flex;
+     margin: 30px 0;
+     justify-content: space-between;
+ }
+ 
+ .poj3 {
+     border: 1px solid red;
+     height: 300px;
+     position: relative;
+ }
+ 
+ .poj3 h2 {
+     position: absolute;
+     right: 50px;
+     bottom: 38px;
+ }
+  */
+ 
+ @media only screen and (max-width: 767px) {
+     .heading h2 {
+         font-size: 16px;
+     }
  }
