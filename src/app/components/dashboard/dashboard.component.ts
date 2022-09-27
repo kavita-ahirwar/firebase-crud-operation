@@ -14,5 +14,10 @@ display!: boolean;
 
   ngOnInit(): void {
   }
+  logOut(){
+    if(confirm("Are you Sure ?")){
+      this.authService.SignOut();
+    }
+  }
 
 }

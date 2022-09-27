@@ -222,11 +222,9 @@ DeleteStudent(id: string) {
 
   SignOut() {
     return this.afAuth.signOut().then(() => {
-      
-      if(confirm('Are you sure ? you want to logOut.')){
         localStorage.removeItem('user');
         this.router.navigate(['sign-in']);
-      }
+      
     });
   }
 }

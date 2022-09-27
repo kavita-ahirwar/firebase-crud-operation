@@ -1,6 +1,6 @@
 .main {
     width: 700px;
-    height: 800px;
+    min-height: 100vh;
     margin: auto;
     margin-top: 150px;
     font-size: 17px;
