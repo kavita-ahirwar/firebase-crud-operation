@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import {PasswordModule} from 'primeng/password';
 
 
 
@@ -40,7 +41,7 @@ export class SignUpComponent implements OnInit {
       displayName :['', [Validators.required, Validators.pattern("[a-zA-Z ]*")]],
       email: ['', [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]],
       photoURL:['',Validators.required],
-      password: ['', [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z0-9._%+-]")]],
+      password: ['', [Validators.required, Validators.pattern("[A-z0-9._%+-]+@[a-z0-9.-]+\.[a-z0-9._%+-]")]],
       mobile: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       // image: ['', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]],
       // address: ['', [Validators.required, Validators.pattern("[a-zA-Z ]*")]],

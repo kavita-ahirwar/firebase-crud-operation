@@ -32,6 +32,7 @@ export class AuthService {
         this.data=user;
         localStorage.setItem('user',JSON.stringify(this.data));
         JSON.parse(localStorage.getItem('user')!);
+        //  this.router.navigate(['/sign-in']);
       }
       else{
         localStorage.setItem('user','null');

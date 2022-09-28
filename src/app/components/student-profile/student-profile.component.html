@@ -1,31 +1,29 @@
-<div class="container">
+<div class="container" *ngIf="authService.data as user">
     <div class="row">
         <div class="col ml-12">
-            <p-card style="width: 500px; height:500px; margin-top:100px; text-align: center;">
-                <div class="col-md-12">
-                    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                        <div class="inner-adjust">
-                            <div class="pt-3 pb-2 mb-3 border-bottom">
-                                <h1 class="h2" style="color: red; margin-top:20px; font-family: poppins; font-weight: bolder;">User Profile</h1>
-                            </div>
-                            <!-- Show user data when logged in -->
-                            <div class="row" *ngIf="authService.data as user">
-                                <div class="col-md-12" style="color: black; font-family:poppins">
-                                    <div class="media">
-                                        <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
-                                        <div class="media-body">
-                                            <h1 style="color: blue; font-family:poopins">Wel-Come :- <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
-                                            <p>User ID :- <strong>{{user.uid}}</strong></p>
-                                            <p>Email :- <strong>{{user.email}}</strong></p>
-                                            <p>Email Verified :- <strong>{{user.emailVerified}}</strong></p>
-                                        </div>
-                                        <button class="btn btn-secondary" type="go back" routerLink="/dashboard">Go back</button>
+            <p-card [style]="{'display': 'flex', 'align-items': 'center', 'text-align':'center', 'margin-top': '50px','width':'400px','justify-content': 'center'}" *ngIf="authService.data as user">
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                    <div class="inner-adjust">
+                        <div class="pt-3 pb-2 mb-3 border-bottom">
+                            <h1 class="h2" style="color: red; margin-top:20px; font-family: poppins; font-weight: bolder;">User Profile</h1>
+                        </div>
+                        <!-- Show user data when logged in -->
+                        <div class="row">
+                            <div class="col-md-12" style="color: black; font-family:poppins">
+                                <div class="media">
+                                    <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
+                                    <div class="media-body">
+                                        <h1 style="color: blue; font-family:poopins; font-size: 22px;">Wel-Come :- <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+                                        <p>User ID :- <strong>{{user.uid}}</strong></p>
+                                        <p>Email :- <strong>{{user.email}}</strong></p>
+                                        <p>Email Verified :- <strong>{{user.emailVerified}}</strong></p>
                                     </div>
+                                    <button class="btn btn-secondary" type="go back" routerLink="/dashboard">Go back</button>
                                 </div>
                             </div>
                         </div>
-                    </main>
-                </div>
+                    </div>
+                </main>
             </p-card>
         </div>
     </div>

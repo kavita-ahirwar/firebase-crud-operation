@@ -3,10 +3,6 @@
      font-weight: bold;
      font-size: 15px;
  }
- /* .btn {
-     margin-right: 100px;
- }
-  */
  
  .btn_back {
      text-align: right;
@@ -19,6 +15,13 @@
  table th,
  table td {
      white-space: nowrap;
+ }
+ 
+ .heading h2 {
+     font-family: poppins;
+     font-size: 20px;
+     color: brown;
+     font-weight: bold;
  }
  /* .poj {
      border: 1px solid #ccc;
@@ -50,5 +53,11 @@
  @media only screen and (max-width: 767px) {
      .heading h2 {
          font-size: 16px;
+     }
+ }
+ 
+ @media only screen and (max-weidth:767) {
+     .user_list {
+         width: 100vh;
      }
  }

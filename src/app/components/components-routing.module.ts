@@ -40,23 +40,23 @@ const routes: Routes = [
     component:DashboardComponent
   },
   {
-    path:"student-list",
+    path:"student-list",canActivate:[AuthGuard],
     component:StudentListComponent
   },
   {
-    path:'student-profile',
+    path:'student-profile',canActivate:[AuthGuard],
     component:StudentProfileComponent
   },
   {
-    path:'student-add',
+    path:'student-add',canActivate:[AuthGuard],
     component:AddStudentComponent
   },
   {
-    path:"edit-student/:id",
+    path:"edit-student/:id",canActivate:[AuthGuard],
     component:EditStudentComponent
   },
   {
-    path:"delete-student",
+    path:"delete-student",canActivate:[AuthGuard],
     component:DeleteStudentComponent
   }
 ];

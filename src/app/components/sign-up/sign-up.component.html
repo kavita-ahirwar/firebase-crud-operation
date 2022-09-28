@@ -3,7 +3,7 @@
         <!-- <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> -->
         <!-- <p-card> -->
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-            <p-card class="card">
+            <p-card>
 
                 <div>
                     <h1>Sign Up</h1>
@@ -22,19 +22,27 @@
                 <div class="form-group">
                     <span class="p-input-icon-left">
                        <i class="pi pi-envelope"></i>
-                       <input type="email" pInputText placeholder="Email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">         
+                        <input type="email" pInputText placeholder="Email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">                                                           
                     </span><br>
                     <span *ngIf="!f.email.valid && f.email.touched && !f.email.errors?.pattern" style="color: red;">Email is required</span>
                     <div *ngIf="f.email.errors?.pattern" style="color: red;">please enter valid Email</div>
                 </div>
                 <br>
-                <div class="form-group">
+                <div class="form-group" style="width: 500px;">
                     <span class="p-input-icon-left">
-                       <i class="pi pi-unlock"></i>
-                       <input type="password" pInputText placeholder="Password" class="form-control" formControlName="password"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }">         
+                       <i class="pi pi-unlock" style="margin: none;"></i>
+                       <input type="password" pInputText placeholder="Password" class="form-control" formControlName="password"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }"> 
                     </span>
                     <span *ngIf="( f.password.touched && !f.password.valid && !f.password.errors?.pattern) " style="color: red;">Password is required</span>
-                    <div *ngIf="f.password.errors?.pattern" style="color: red;">please enter strong password </div>
+                    <div *ngIf="f.password.errors?.pattern" style="color: red;">please enter strong password :-
+                        <p class="mt-2">Suggestions</p>
+                        <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                            <li>At least one lowercase</li>
+                            <li>At least one uppercase</li>
+                            <li>At least one numeric</li>
+                            <li>Minimum 6 characters</li>
+                        </ul>
+                    </div>
                 </div><br>
 
                 <div class="form-group">

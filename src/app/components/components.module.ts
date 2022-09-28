@@ -23,6 +23,11 @@ import { PrimeIcons } from 'primeng/api';
 import {MatIconModule} from '@angular/material/icon';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { DeleteStudentComponent } from './delete-student/delete-student.component';
+import {PasswordModule} from 'primeng/password';
+import {DividerModule} from 'primeng/divider';
+import {TableModule} from 'primeng/table';
+
+import {MultiSelectModule} from 'primeng/multiselect';
 // import { PrimeIcons} from 'primeng/api';
 
 
@@ -53,8 +58,10 @@ import { DeleteStudentComponent } from './delete-student/delete-student.componen
     AvatarGroupModule,
     PaginatorModule,
     MatIconModule,
-    
-
+    PasswordModule,
+    DividerModule,
+    TableModule,
+    MultiSelectModule,
     ToastrModule.forRoot()
   ],
   exports:[DashboardComponent]

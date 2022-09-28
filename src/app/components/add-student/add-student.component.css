@@ -2,7 +2,7 @@
     width: 700px;
     min-height: 100vh;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 50px;
     font-size: 17px;
     font-family: poppins;
     font-weight: bold;
@@ -14,4 +14,12 @@
     font-size: 30px;
     font-family: poppins;
     font-weight: bold;
+}
+
+input.ng-invalid.ng-touched {
+    border: red 1px solid;
+}
+
+.input-error {
+    border: red 1px solid;
 }
