@@ -1,6 +1,4 @@
-<!-- <p>edit-student works!</p> -->
 <div class="main">
-    <!-- <p-card> -->
     <div class="container">
         <p-card>
             <div class="row">
@@ -37,16 +35,6 @@
                             <!-- <div *ngIf="f['email'].errors" style="color: red;">please enter valid Email</div> -->
                             <!-- </div> -->
                         </div>
-                        <!-- <div class="form-group">
-                            <label style="margin-top: 20px;">Password</label>
-                            <input class="form-control" type="text" placeholder="Please Enter Password" style="margin-top: 10px;" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
-                            <span *ngIf="( f['password'].touched && !f['password'].valid && !f['password'].errors) " style="color: red;">Password is required</span>
-                            <div *ngIf="(submitted && f['password'].errors)" class="invalid-feedback">
-                                <div *ngIf="f['password'].errors">password is required</div>
-                            </div> -->
-                        <!-- <div *ngIf="f['password'].errors" style="color: red;">please enter strong password </div> -->
-                        <!-- </div> -->
-                        <!-- </div> -->
                         <div class="form-group">
                             <label style="margin-top: 20px;">Mobile number</label>
                             <input class="form-control" type="text" placeholder="Please Enter Mobile number" style="margin-top: 10px;" formControlName="mobileNumber" [ngClass]="{ 'is-invalid': submitted && f['mobileNumber'].errors }">
@@ -58,14 +46,9 @@
                             <!-- <div *ngIf="(submitted && f['mobileNumber'].errors)" class="invalid-feedback"> -->
                             <!-- <div *ngIf="f['mobileNumber'].errors">Mobile Number is required</div> -->
                         </div>
-                        <!-- </div> -->
                         <br>
-                        <!-- <div>
-                        <button type="button" class="btn btn-danger" class="Reset">Cancel</button>
-                    </div> -->
                         <div>
                             <button type="button" class="btn btn-secondary gap-right" (click)="goBack()">Go Back</button>&nbsp;
-                            <!-- <button type="reset" class="btn btn-secondary" class="Reset">Cancel</button> -->
                             <button type="submit" class="btn btn-primary">Save</button>
                         </div>
                     </form>
@@ -73,5 +56,4 @@
             </div>
         </p-card>
     </div>
-    <!-- </p-card> -->
 </div>

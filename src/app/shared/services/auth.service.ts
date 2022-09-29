@@ -51,9 +51,14 @@ export class AuthService {
           if (user) {
             this.router.navigate(['dashboard']);
           }
+          else{
+            console.log("user not found."+user)
+            window.alert('user not found.')
+          }
         });
       })
       .catch((error) => {
+        console.log(error)
         window.alert(error.message);
       });
   }
@@ -99,12 +104,19 @@ return user !== null && user.emailVerified !==false ? true : false;
 
 
 GoogleAuth() {
+
   return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
+     console.log(res)
     this.router.navigate(['dashboard']);
+  }).catch((error)=>{
+    
+   console.log(error);
+   window.alert("user not found..")
   });
 }
 // Auth logic to run auth providers
 AuthLogin(provider: any) {
+  
   return this.afAuth
     .signInWithPopup(provider)
     .then((result) => {
@@ -112,6 +124,8 @@ AuthLogin(provider: any) {
       this.setUserData(result.user);
     })
     .catch((error) => {
+     
+      console.log("user not found.."+error)
       window.alert(error);
     });
 }
@@ -127,29 +141,6 @@ getUsers(){
     })
   })
 }
-
-
-// getStudents() {
-  
-//   this.data = this.afs.collection('users').snapshotChanges().pipe(map(changes => {
-
-//   return changes.map(a => {
-//   const data: any = a.payload.doc.data();
-//   console.log(data)
-//   return data;
-//   });
-//   })
-//   );
-
-//   this.data.subscribe((result:any) => {
-//   console.log(result);
-//   this.data = result;
-//     //this.blogs_snapshot = res;
-//   }
-//   );
-
-//   }
-
   // Fetch Single Student Object
   GetStudent(id: string) {
     this.studentRef = this.db.object('students-list/' + id);
@@ -230,155 +221,5 @@ DeleteStudent(id: string) {
   }
 }
 
-
-// if(confirm('r u sure?')){
-//   localStorage.removeItem('user');
-//   this.router.navigate(['/sign-in']);
-//   }
-
-
-
-
-  //   data: any;
-//   loginForm: FormGroup = new FormGroup({
-//     userName: new FormControl(''),
-//     email: new FormControl(''),
-//     mobile: new FormControl(''),
-//     password: new FormControl(''),
-//     confirmpwd: new FormControl(''),
-//     photoURL: new FormControl('')
-//   });
-//   submitted: boolean = false;
-//   constructor(public auth: AuthService, public fb: FormBuilder) {}
-//   ngOnInit(): void {
-//     this.loginForm = this.fb.group({
-//       userName: ['', Validators.required],
-//       email: ['', Validators.required],
-//       mobile: ['', Validators.required],
-//       password: ['', Validators.required],
-//       confirmpwd: ['', Validators.required],
-//       photoURL: ['', Validators.required]
-//     })
-//   }
-//   get f(): { [key: string]: AbstractControl } {
-//     return this.loginForm.controls;
-//   }
-//   onSubmit() {
-//     this.submitted = true;
-//     if (this.loginForm.invalid) {
-//       return;
-//     }
-//     this.data = this.loginForm.value;
-//     let cid = Math.floor(100000 + Math.random() * 900000);
-//     console.log(cid);
-//     this.data.userId = cid;
-//     this.data.emailVerified = false;
-//     console.log(this.data);
-//     this.auth.signUp(this.data.email, this.data.password).then(res => {
-//       window.alert('data has been set')
-//     }).catch(error => {
-//       window.alert('Unable to set data');
-//     })
-//   }
-//   reset() {
-//     this.submitted = false;
-//     this.loginForm.reset();
-//   }
-// }
-  
-
-//kavita
-
-// data: any;
-// constructor(public afs: AngularFirestore, public afAuth: AngularFireAuth,
-//   public router: Router, public ngZone: NgZone) {
-//   this.afAuth.authState.subscribe((user) => {
-//     if (user) {
-//       this.data = user;
-//       localStorage.setItem('user', JSON.stringify(this.data));
-//       JSON.parse(localStorage.getItem('user')!);
-//     }
-//     else {
-//       localStorage.setItem('user', 'null');
-//       JSON.parse(localStorage.getItem('user')!);
-//     }
-//   })
-// }
-// signIn(email: string, password: string) {
-//   return this.afAuth.signInWithEmailAndPassword(email, password).then((result) => {
-//     this.setUserData(result.user);
-//     this.afAuth.authState.subscribe((user) => {
-//       if (user) {
-//         this.router.navigate(['/dashboard']);
-//       }
-//     })
-//   })
-//     .catch((error) => {
-//       window.alert(error.message);
-//     })
-// }
-// signUp(email:string, password:string){
-//   return this.afAuth.createUserWithEmailAndPassword(email,password).then((result)=>
-//   {
-//     this.sendVerificationMail();
-//     this.setUserData(result.user);
-//   })
-//   .catch((error)=>{
-//     window.alert(error.message)
-//   });
-// }
-// sendVerificationMail(){
-// return this.afAuth.currentUser.then((u:any)=>u.sendEmailVerification()).then(()=>{
-//   this.router.navigate(['/verify-email']);
-// });
-// }
-// forgotPassword(resetEmail:string){
-// return this.afAuth.sendPasswordResetEmail(resetEmail).then(()=>{
-//   window.alert("Password reset email has been sent,Please check your inbox.");
-// })
-// .catch((error)=>{
-//   window.alert(error);
-// })
-// }
-// get isLoggedIn():boolean{
-// const user = JSON.parse(localStorage.getItem('user')!);
-// return user !== null && user.emailVerified !==false ? true : false;
-// }
-// GoogleAuth(){
-// return this.authLogin(new auth.GoogleAuthProvider()).then((res: any)=>{
-//   this.router.navigate(['/dashboard']);
-// });
-// }
-// authLogin(provider: any){
-// return this.afAuth.signInWithPopup(provider).then((result)=>{
-//   this.router.navigate(['/dashboard']);
-//   this.setUserData(result.user)
-// })
-// .catch((error)=>{
-//   window.alert(error);
-// })
-// }
-// setUserData(user:any){
-// const userRef: AngularFirestoreDocument<any> = this.afs.doc(
-//   `users/${user.userId}`
-// );
-// const data:User = {
-//   userId: user.userId,
-//   userName: user.userName,
-//   email: user.email,
-//   password: user.password,
-//   mobile: user.mobile,
-//   photoURL: user.photoURL,
-//   emailVerified: user.emailVerified
-// };
-// return userRef.set(data,{merge:true})
-// }
-// signOut(){
-// return this.afAuth.signOut().then(()=>{
-//   localStorage.removeItem('user');
-//   this.router.navigate(['/sign-in']);
-// })
-// }
-// }
 
 

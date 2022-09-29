@@ -1,49 +1,51 @@
-<div class="main">
+<div class="sign-in">
+    <div class="main">
 
-    <form [formGroup]="registerForm" (ngSubmit)="Signin()">
-        <p-card>
-            <div>
-                <h1>Sign In</h1>
-            </div>
-            <div class="form-group">
-                <button pButton type="button" label="SignIn with Google" class="p-button-danger" (click)="authService.GoogleAuth()"><i class="pi pi-google"></i>&nbsp;</button>&nbsp;
-                <!-- <button type="submit " class="btn btn-danger ">Submit</button> -->
-            </div><br>
-            <div class="or">
-                <h3>-OR-</h3>
-            </div><br>
-            <div class="form-group">
-                <span class="p-input-icon-left">
+        <form [formGroup]="registerForm" (ngSubmit)="Signin()">
+            <p-card>
+                <div>
+                    <h1>Sign In</h1>
+                </div>
+                <div class="form-group">
+                    <button pButton type="button" label="SignIn with Google" class="p-button-danger" (click)="authService.GoogleAuth()"><i class="pi pi-google"></i>&nbsp;</button>&nbsp;
+                    <!-- <button type="submit " class="btn btn-danger ">Submit</button> -->
+                </div><br>
+                <div class="or">
+                    <h3>-OR-</h3>
+                </div><br>
+                <div class="form-group">
+                    <span class="p-input-icon-left">
                    <i class="pi pi-envelope"></i>
                    <input type="text" pInputText placeholder="email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">         
                 </span><br>
-                <span *ngIf="!f.email.valid && f.email.touched && !f.email.errors?.pattern" style="color: red;">Email is required</span>
-                <div *ngIf="f.email.errors?.pattern" style="color: red;">please enter valid Email</div>
-            </div>
-            <br>
-            <div class="form-group">
-                <span class="p-input-icon-left">
+                    <span *ngIf="!f.email.valid && f.email.touched && !f.email.errors?.pattern" style="color: red;">Email is required</span>
+                    <div *ngIf="f.email.errors?.pattern" style="color: red;">please enter valid Email</div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <span class="p-input-icon-left">
                    <i class="pi pi-unlock"></i>
                    <input type="text" pInputText placeholder="password" class="form-control" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">         
                 </span><br>
-                <span *ngIf="!f.password.valid && f.password.touched && !f.password.errors?.pattern" style="color: red;">Password is required</span>
-                <div *ngIf="f.password.errors?.pattern" style="color: red;">please enter valid Password</div>
-            </div><br>
-            <div class="form-conrol">
-                <div class="forgotPassword">
-                    <span routerLink="/forgot-password" class="p-float-label">Forgot Password?</span>
-                </div>
-            </div><br>
-            <div>
-                <!-- <button pButton type="button" label="SIngIn" class="p-button-primary"></button>&nbsp; -->
-                <button type="submit " class="btn btn-primary ">SignIn</button>
-            </div><br>
-            <div class="redirectToLogin">
-                <span class="p-float-label">Don't have an account?<span class="redirect" routerLink="/sign-up"> Sign Up</span></span>
-            </div><br>
-        </p-card>
+                    <span *ngIf="!f.password.valid && f.password.touched && !f.password.errors?.pattern" style="color: red;">Password is required</span>
+                    <div *ngIf="f.password.errors?.pattern" style="color: red;">please enter valid Password</div>
+                </div><br>
+                <div class="form-conrol">
+                    <div class="forgotPassword">
+                        <span routerLink="/forgot-password" class="p-float-label">Forgot Password?</span>
+                    </div>
+                </div><br>
+                <div>
+                    <!-- <button pButton type="button" label="SIngIn" class="p-button-primary"></button>&nbsp; -->
+                    <button type="submit " class="btn btn-primary ">SignIn</button>
+                </div><br>
+                <div class="redirectToLogin">
+                    <span class="p-float-label">Don't have an account?<span class="redirect" routerLink="/sign-up"> Sign Up</span></span>
+                </div><br>
+            </p-card>
 
-    </form>
+        </form>
+    </div>
 </div>
 
 

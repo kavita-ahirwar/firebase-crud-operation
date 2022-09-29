@@ -22,9 +22,22 @@ export class StudentListComponent implements OnInit {
 users:any=[];
 keydata:any;
 
+cols!: any[];
+
+totalRecords!: number;
+
    constructor(public authService:AuthService,public toastr:ToastrService) { }
 
   ngOnInit(): void {
+
+
+  //   this.cols = [
+  //     { field: 'name', header: 'Name' },
+  //     {field: 'author', header: 'Author' },
+  //     { field: 'price', header: 'Price' }      
+  // ];
+  // this.totalRecords=this.Student.length;
+
 
     this.dataState();
     
@@ -63,6 +76,13 @@ keydata:any;
     }
   }
 
+
+  paginate(event:any) {
+    //event.first = Index of the first record
+    //event.rows = Number of rows to display in new page
+    //event.page = Index of the new page
+    // event.pageCount = 
+}
 
   // getData() {
   //   debugger

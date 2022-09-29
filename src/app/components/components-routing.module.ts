@@ -11,6 +11,7 @@ import { StudentProfileComponent } from './student-profile/student-profile.compo
 import { AddStudentComponent } from './add-student/add-student.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { DeleteStudentComponent } from './delete-student/delete-student.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 const routes: Routes = [
   { 
@@ -36,28 +37,38 @@ const routes: Routes = [
   },
   
   {
-    path:"dashboard", canActivate:[AuthGuard],
-    component:DashboardComponent
+    path:"dashboard", 
+    component:DashboardComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:"student-list",canActivate:[AuthGuard],
-    component:StudentListComponent
+    path:"student-list",
+    component:StudentListComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:'student-profile',canActivate:[AuthGuard],
-    component:StudentProfileComponent
+    path:'student-profile',
+    component:StudentProfileComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:'student-add',canActivate:[AuthGuard],
-    component:AddStudentComponent
+    path:'student-add',
+    component:AddStudentComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:"edit-student/:id",canActivate:[AuthGuard],
-    component:EditStudentComponent
+    path:"edit-student/:id",
+    component:EditStudentComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:"delete-student",canActivate:[AuthGuard],
-    component:DeleteStudentComponent
+    path:"delete-student",
+    component:DeleteStudentComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:"**",
+    component:ErrorPageComponent
   }
 ];
 

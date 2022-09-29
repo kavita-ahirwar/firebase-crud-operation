@@ -28,6 +28,7 @@ import {DividerModule} from 'primeng/divider';
 import {TableModule} from 'primeng/table';
 
 import {MultiSelectModule} from 'primeng/multiselect';
+import { ErrorPageComponent } from './error-page/error-page.component';
 // import { PrimeIcons} from 'primeng/api';
 
 
@@ -43,7 +44,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
     StudentProfileComponent,
     AddStudentComponent,
     EditStudentComponent,
-    DeleteStudentComponent
+    DeleteStudentComponent,
+    ErrorPageComponent
   ],
   imports: [
     CommonModule,

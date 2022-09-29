@@ -1,4 +1,4 @@
-<div class="container">
+<div class="sign-up">
     <div class="main">
         <!-- <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> -->
         <!-- <p-card> -->
@@ -65,19 +65,15 @@
                     <span *ngIf="!f.photoURL.valid && f.photoURL.touched && !f.photoURL.errors?.pattern" style="color: red;">photoURL is required</span>
                     <div *ngIf="f.photoURL.errors?.pattern" style="color: red;">please enter valid Password</div>
                 </div><br>
-                <!-- <div class="form-group">
-                    <span class="p-input-icon-left">
-                       <i class="pi pi-user"></i>
-                       <input type="url" pInputText placeholder="image" class="form-control" formControlName="image"  [ngClass]="{ 'is-invalid': submitted && f.image.errors }">         
-                    </span><br>
-                    <span *ngIf="!f.image.valid && f.image.touched && !f.image.errors?.pattern" style="color: red;">image is required</span>
-                    <div *ngIf="f.image.errors?.pattern" style="color: red;">please upload image</div>
-                </div><br> -->
 
                 <div>
                     <button type="submit " class="btn btn-danger ">Submit</button>
                     <!-- <button pButton type="button" label="SIngUp" class="p-button-primary" value="signUp"></button> -->
 
+                </div><br>
+                <div class="form-group">
+                    <button pButton type="button" label="Continue with Google" class="p-button-secondary" (click)="authService.GoogleAuth()"><i class="pi pi-google"></i>&nbsp;</button>&nbsp;
+                    <!-- <button type="submit " class="btn btn-danger ">Submit</button> -->
                 </div><br>
                 <div class="redirectToLogin">
                     <span class="p-float-label">Already have an account?<span class="redirect" routerLink="/sign-in"> Sign In </span></span>
